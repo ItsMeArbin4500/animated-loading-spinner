@@ -1,0 +1,65 @@
+*{
+   box-sizing:border-box;
+
+}
+body{
+    display:flex;
+    height:100vh;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    font-family:arial,sans-serif;
+}
+.spinner{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    height:300px;
+}
+.sector{
+    border-radius:50%;
+    position:absolute;
+    width:100%;
+    height:100%;
+    
+    border:15px solid transparent;
+    mix-blend-mode:overlay;
+
+}
+.sector1{
+    border-top:15px solid lightblue;
+    animation:rotate 2s ease-out infinite;
+}
+.sector2{
+    border-top:15px solid lightcoral;
+    animation:rotate 2.5s ease-in infinite;
+
+}
+.sector3{
+    border-top:15px solid lightgreen;
+    animation:rotate 1.5s ease-in-out infinite;
+
+}
+@keyframes rotate{
+    from{transform:rotate(0);}
+    to{transform:rotate(360deg);}
+
+}
+.load{
+    animation:text 3s ease-in-out infinite;
+    font-size:25px;
+}
+@keyframes text{
+   0%,100%{
+       opacity:80%;
+   }
+   25%,75%{
+       opacity:50%;
+   }
+   50%{
+       opacity:10%;
+   }
+  
+}
